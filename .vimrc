@@ -37,6 +37,3 @@ set tabstop=4           " the width of a tab is set to 4
 set termencoding=utf-8  " set terminal encoding to utf-8
 set undolevels=1000     " use lots of undos
 set visualbell          " don't beep
-
-au BufWritePost *.go !gofmt -w % " run gofmt on save
-
