@@ -39,3 +39,4 @@ set undolevels=1000     " use lots of undos
 set visualbell          " don't beep
 
 au BufWritePost *.go !gofmt -w % " run gofmt on save
+
