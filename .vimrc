@@ -1,6 +1,7 @@
 set nocompatible        " use vim settings instead of vi
 
-cnoremap w!! w !sudo tee % >/dev/null " sudo to write
+" sudo to write
+cnoremap w!! w !sudo tee % >/dev/null
 colorscheme solarized   " colorscheme solarized 
 filetype indent on      " activates indenting for files
 syntax on               " syntax highlighting
