@@ -38,3 +38,11 @@ set tabstop=4           " the width of a tab is set to 4
 set termencoding=utf-8  " set terminal encoding to utf-8
 set undolevels=1000     " use lots of undos
 set visualbell          " don't beep
+
+if has('ruby')
+    set scrolloff=2          " keep 2 lines off the edge when scrolling
+    set shiftwidth=2         " indent by 2 spaces when auto-indenting
+    set softtabstop=2        " indents that consist of 2 space characters
+    set tabstop=2            " the width of a tab is set to 2
+endif
+
