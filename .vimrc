@@ -2,8 +2,7 @@ set nocompatible                " use vim settings instead of vi
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
-let base16colorspace=256        " access colors present in 256 colorspace
-colorscheme base16-flat         " colorscheme base16-flat 
+colorscheme desert              " colorscheme desert 
 filetype indent on              " activates indenting for files
 syntax on                       " syntax highlighting
 
