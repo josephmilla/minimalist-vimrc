@@ -52,3 +52,4 @@ if has('python') || has('python3')
     set softtabstop=4           " indents that consist of 4 space characters
     set tabstop=4               " the width of a tab is set to 4
 endif
+
