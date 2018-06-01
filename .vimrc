@@ -45,3 +45,10 @@ if has('ruby')
     set softtabstop=2           " indents that consist of 2 space characters
     set tabstop=2               " the width of a tab is set to 2
 endif
+
+if has('python') || has('python3')
+    set scrolloff=4             " keep 4 lines off the edge when scrolling
+    set shiftwidth=4            " indent by 4 spaces when auto-indenting
+    set softtabstop=4           " indents that consist of 4 space characters
+    set tabstop=4               " the width of a tab is set to 4
+endif
