@@ -2,7 +2,8 @@ set nocompatible                " use vim settings instead of vi
 
 " sudo to write
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit! 
-colorscheme desert              " colorscheme desert 
+let base16colorspace=256        " access colors present in 256 color-space
+colorscheme base16-flat         " colorscheme base16-flat 
 filetype indent on              " activates indenting for files
 syntax on                       " syntax highlighting
 
