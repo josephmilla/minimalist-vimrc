@@ -11,7 +11,7 @@ set autoread                    " auto-reload files
 set background=dark             " set dark background
 set backspace=2                 " backspace in insert mode works like normal editor
 set clipboard=unnamed           " share clipboard to the OS
-set copyindent                  " copy the previous indentation on autoindenting
+set copyindent                  " copy the previous indentation on auto-indenting
 set cursorline                  " underline the current line
 set encoding=utf-8              " set encoding to utf-8
 set expandtab                   " expand tabs to spaces
@@ -22,7 +22,7 @@ set hlsearch                    " highlight all search matches
 set ignorecase                  " ignores character case when searching
 set incsearch                   " highlight on the fly
 set linespace=0                 " no extra spaces between rows
-set nobackup                    " get rid of anoying ~file
+set nobackup                    " get rid of annoying ~file
 set noerrorbells                " don't beep
 set nomodeline                  " disable mode lines (for security)
 set noswapfile                  " get rid of swap files
