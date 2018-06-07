@@ -8,6 +8,7 @@ filetype indent on              " activates indenting for files
 syntax on                       " syntax highlighting
 
 set autoindent                  " auto indenting
+set autoread                    " auto-reload files
 set background=dark             " set dark background
 set backspace=2                 " backspace in insert mode works like normal editor
 set clipboard=unnamed           " share clipboard to the OS
