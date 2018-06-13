@@ -56,14 +56,24 @@ nnoremap <leader>c "_c
 nnoremap <leader>cc "_cc
 nnoremap x "_x
 
-if has('ruby')
+" explicit filetype detection
+if exists('did_load_filetypes')
+    finish
+endif
+
+augroup filetypedetect
+    autocmd BufRead,BufNewFile *.py setfiletype python 
+    autocmd BufRead,BufNewFile *.rb setfiletype ruby 
+augroup END
+
+if &filetype== 'python' 
     set scrolloff=2             " keep 2 lines off the edge when scrolling
     set shiftwidth=2            " indent by 2 spaces when auto-indenting
     set softtabstop=2           " indents that consist of 2 space characters
     set tabstop=2               " the width of a tab is set to 2
 endif
 
-if has('python') || has('python3')
+if &filetype == 'ruby' 
     set scrolloff=4             " keep 4 lines off the edge when scrolling
     set shiftwidth=4            " indent by 4 spaces when auto-indenting
     set softtabstop=4           " indents that consist of 4 space characters
