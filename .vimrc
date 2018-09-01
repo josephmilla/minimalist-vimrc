@@ -1,7 +1,8 @@
 set nocompatible                " use vim settings instead of vi
 
 " sudo to write
-command w!! :execute ':silent w !sudo tee % > /dev/null' | :edit! 
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+cnoremap w!! W
 colorscheme desert              " colorscheme desert 
 filetype indent on              " activates indenting for files
 syntax on                       " syntax highlighting
