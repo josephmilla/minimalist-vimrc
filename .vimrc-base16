@@ -1,7 +1,8 @@
 set nocompatible                " use vim settings instead of vi
 
 " sudo to write
-command w!! :execute ':silent w !sudo tee % > /dev/null' | :edit! 
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+cnoremap w!! W
 let base16colorspace=256        " access colors present in 256 color-space
 colorscheme base16-flat         " colorscheme base16-flat 
 filetype indent on              " activates indenting for files
