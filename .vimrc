@@ -56,27 +56,21 @@ nnoremap <leader>c "_c
 nnoremap <leader>cc "_cc
 nnoremap x "_x
 
+" initializes the file with the appropriate indentations, tabstops, etc.
+function! SetIndentation(value)
+    let  &l:shiftwidth   =  a:value
+    let  &l:softtabstop  =  a:value
+    let  &l:tabstop      =  a:value
+endfunction
+
 " explicit filetype detection
 if exists('did_load_filetypes')
+    autocmd  FileType  html        call  SetIndentation(2)
+    autocmd  FileType  javascript  call  SetIndentation(2)
+    autocmd  FileType  python      call  SetIndentation(4)
+    autocmd  FileType  ruby        call  SetIndentation(2)
+    autocmd  FileType  sh          call  SetIndentation(2)
+    autocmd  FileType  yaml        call  SetIndentation(2)
     finish
-endif
-
-augroup filetypedetect
-    autocmd BufRead,BufNewFile *.py setfiletype python
-    autocmd BufRead,BufNewFile *.rb setfiletype ruby
-augroup END
-
-if &filetype == 'ruby'
-    set scrolloff=2             " keep 2 lines off the edge when scrolling
-    set shiftwidth=2            " indent by 2 spaces when auto-indenting
-    set softtabstop=2           " indents that consist of 2 space characters
-    set tabstop=2               " the width of a tab is set to 2
-endif
-
-if &filetype == 'python'
-    set scrolloff=4             " keep 4 lines off the edge when scrolling
-    set shiftwidth=4            " indent by 4 spaces when auto-indenting
-    set softtabstop=4           " indents that consist of 4 space characters
-    set tabstop=4               " the width of a tab is set to 4
 endif
 
