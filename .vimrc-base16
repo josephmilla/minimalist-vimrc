@@ -66,12 +66,14 @@ endfunction
 
 " explicit filetype detection
 if exists('did_load_filetypes')
-    autocmd  FileType  html        call  SetIndentation(2)
-    autocmd  FileType  javascript  call  SetIndentation(2)
-    autocmd  FileType  python      call  SetIndentation(4)
-    autocmd  FileType  ruby        call  SetIndentation(2)
-    autocmd  FileType  sh          call  SetIndentation(2)
-    autocmd  FileType  yaml        call  SetIndentation(2)
+    autocmd  FileType  html        call      SetIndentation(2)
+    autocmd  FileType  javascript  call      SetIndentation(2)
+    autocmd  FileType  python      call      SetIndentation(4)
+    autocmd  FileType  ruby        call      SetIndentation(2)
+    autocmd  FileType  sh          call      SetIndentation(4)
+    autocmd  FileType  yaml        call      SetIndentation(2)
+    autocmd  FileType  tf          call      SetIndentation(2)
+    autocmd  FileType  make        setlocal  noexpandtab
     finish
 endif
 
